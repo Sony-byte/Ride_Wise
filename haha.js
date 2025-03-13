@@ -562,3 +562,18 @@ function showVehicles() {
         </div>
     `).join('');
 }
+
+document.querySelector('.settings-button').addEventListener('click', function() {
+    const menu = document.querySelector('.settings-menu');
+    menu.classList.toggle('active');
+});
+
+document.querySelector('.settings-menu ul li a[href*="logout"]').addEventListener('click', function(e) {
+    if (!confirm('Are you sure you want to logout?')) {
+        e.preventDefault(); // Membatalkan navigasi jika pengguna memilih "Cancel"
+    }
+});
+
+document.querySelector('#dark-mode-toggle').addEventListener('click', function() {
+    document.querySelector('html').toggleAttribute('data-dark-mode')
+  })

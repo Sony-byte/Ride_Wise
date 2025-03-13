@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-
         <h1>Detail Kendaraan</h1>
     </header>
 
@@ -19,31 +18,31 @@
             <p id="detail-description">Deskripsi Kendaraan</p>
 
             <h2>Kelebihan</h2>
-            <ul id="detail-pros">
-                <!-- Kelebihan kendaraan akan ditampilkan di sini -->
-            </ul>
+            <ul id="detail-pros"></ul>
 
             <h2>Kekurangan</h2>
-            <ul id="detail-cons">
-                <!-- Kekurangan kendaraan akan ditampilkan di sini -->
-            </ul>
+            <ul id="detail-cons"></ul>
 
             <h2>Harga</h2>
             <p id="detail-price">Rp 0</p>
 
             <h2>Ulasan</h2>
-            <ul id="detail-reviews">
-                <!-- Ulasan kendaraan akan ditampilkan di sini -->
-            </ul>
+            <ul id="detail-reviews"></ul>
+
+            <!-- Tombol Tambah ke Keranjang dan Beli -->
+            <button id="buy-now">Beli Sekarang</button>
         </div>
     </main>
 
-
+    <div class="footer-text1">By Sony Iman Kurnia</div>
+    <h4>
         <div class="footer-text1">
-
-            By Sony & Dini
+            <button type="button" id="recommend-button">
+                <a href="index.html" style="color: rgb(241, 237, 237);">Beranda</a>
+            </button>
         </div>
-        <h4><div class="footer-text1"><button type="button" id="recommend-button"><a href="index.html" style="color: rgb(241, 237, 237);" >Beranda</a></button></div></h4>
+    </h4>
+
     <script>
         // Ambil parameter dari URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -60,16 +59,19 @@
         document.getElementById('detail-image').src = image;
         document.getElementById('detail-description').textContent = description;
 
-        const prosList = document.getElementById('detail-pros');
-        prosList.innerHTML = pros.map(pro => `<li>${pro}</li>`).join('');
-
-        const consList = document.getElementById('detail-cons');
-        consList.innerHTML = cons.map(con => `<li>${con}</li>`).join('');
-
+        document.getElementById('detail-pros').innerHTML = pros.map(pro => `<li>${pro}</li>`).join('');
+        document.getElementById('detail-cons').innerHTML = cons.map(con => `<li>${con}</li>`).join('');
         document.getElementById('detail-price').textContent = price;
+        document.getElementById('detail-reviews').innerHTML = reviews.map(review => `<li>${review}</li>`).join('');
 
-        const reviewsList = document.getElementById('detail-reviews');
-        reviewsList.innerHTML = reviews.map(review => `<li>${review}</li>`).join('');
+
+        // Fungsi Beli Sekarang (Redirect ke WhatsApp)
+        document.getElementById('buy-now').addEventListener('click', function () {
+            let phoneNumber = "088802377919"; // Ganti dengan nomor WhatsApp yang benar
+            let message = `Halo, saya ingin membeli ${name} dengan harga ${price}. Bisa beri info lebih lanjut?`;
+            let whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank");
+        });
     </script>
 </body>
 </html>

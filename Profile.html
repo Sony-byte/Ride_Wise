@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Perusahaan - Jual Beli Mobil</title>
+    <style>
+        /* Reset dan Dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f9, #e0f7fa);
+            color: #333;
+        }
+
+        header {
+            background: #00796b;
+            color: white;
+            padding: 1.5em 0;
+            text-align: center;
+            font-size: 2.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+            color: #00796b;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-text h2 {
+            font-size: 2em;
+            color: #00796b;
+            margin-bottom: 0.5em;
+        }
+
+        .about-text p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .values-section {
+            margin-top: 3em;
+        }
+
+        .values-section h2 {
+            font-size: 2em;
+            color: #00796b;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .values-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 1.5em;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .value-card h3 {
+            font-size: 1.5em;
+            color: #00796b;
+            margin-bottom: 0.5em;
+        }
+
+        .value-card p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #00796b;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 0.5em;
+            font-size: 1em;
+        }
+
+        .back-button {
+            display: block;
+            margin: 1em auto;
+            padding: 0.5em 0.5em;
+            background: #00796b;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s;
+            width: fit-content;
+        }
+
+        .back-button:hover {
+            background: #004d40;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Profil Perusahaan
+    </header>
+
+    <main>
+        <div class="intro">
+            <h1>Selamat Datang di Perusahaan Jual Beli Mobil Terpercaya</h1>
+            <p>
+                Kami adalah perusahaan terkemuka yang menyediakan solusi jual beli mobil terbaik
+dengan layanan yang cepat, mudah, dan aman. Dengan pengalaman bertahun-tahun di industri otomotif,
+kami selalu mengutamakan kepuasan pelanggan.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <div class="about-image">
+                <img src="Perusahaan.jpg" alt="Mobil Mewah">
+            </div>
+            <div class="about-text">
+                <h2>Tentang Kami</h2>
+                <p>
+                    Didirikan pada tahun 2010, perusahaan kami telah membantu ribuan pelanggan untuk menemukan
+                    mobil impian mereka atau menjual kendaraan mereka dengan harga yang kompetitif. Kami bangga
+                    menjadi mitra terpercaya dalam setiap transaksi.
+                </p>
+                <p>
+                    Kami percaya bahwa setiap pelanggan layak mendapatkan layanan terbaik, mulai dari konsultasi,
+                    penilaian kendaraan, hingga proses transaksi yang transparan.
+                </p>
+            </div>
+        </div>
+
+        <div class="values-section">
+            <h2>Nilai-Nilai Kami</h2>
+            <div class="values-cards">
+                <div class="value-card">
+                    <h3>Kepercayaan</h3>
+                    <p>
+                        Kami memastikan setiap transaksi dilakukan dengan transparansi dan integritas penuh.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3>Kualitas</h3>
+                    <p>
+                        Kami hanya menawarkan kendaraan berkualitas tinggi yang telah melalui proses inspeksi ketat.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3>Inovasi</h3>
+                    <p>
+                        Kami terus berinovasi untuk memberikan pengalaman terbaik kepada pelanggan, baik secara online
+                        maupun offline.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Kembali ke Halaman Awal</a>
+    </main>
+
+</body>
+</html>
