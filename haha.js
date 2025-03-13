@@ -416,7 +416,7 @@ const recommendations = {
     ],
     truck: [
       
-    { brand: 'Chevrolet', name: 'Chevrolet Colorado', description: 'Kinerja andal dan fitur modern.', image: 'chevrolet 11.JPEG', pros: ['Kinerja andal', 'Fitur modern', 'Kualitas build baik'], cons: ['Harga bisa lebih tinggi', 'Konsumsi bahan bakar relatif tinggi'], price: 'Rp 560.000.000', reviews: ['Kinerja sangat baik', 'Fitur-fitur canggih'] },
+    { brand: 'Chevrolet', name: 'Chevrolet Colorado', description: 'Kinerja andal dan fitur modern.', image: 'chevrolet 1.JPEG', pros: ['Kinerja andal', 'Fitur modern', 'Kualitas build baik'], cons: ['Harga bisa lebih tinggi', 'Konsumsi bahan bakar relatif tinggi'], price: 'Rp 560.000.000', reviews: ['Kinerja sangat baik', 'Fitur-fitur canggih'] },
     { brand: 'Chevrolet', name: 'Chevrolet Silverado', description: 'Truk besar dengan daya angkut tinggi.', image: 'chevrolet 22.JPEG', pros: ['Daya angkut besar', 'Kekuatan mesin'], cons: ['Dimensi besar', 'Konsumsi bahan bakar tinggi'], price: 'Rp 650.000.000', reviews: ['Sangat kuat dan tahan lama', 'Ideal untuk tugas berat'] },
     { brand: 'Chevrolet', name: 'Chevrolet Express', description: 'Truk van serbaguna untuk bisnis.', image: 'chevrolet 33.JPEG', pros: ['Ruang luas', 'Kapasitas tinggi'], cons: ['Konsumsi bahan bakar tinggi', 'Desain kurang modern'], price: 'Rp 700.000.000', reviews: ['Cocok untuk transportasi barang', 'Sangat praktis'] },
     { brand: 'Chevrolet', name: 'Chevrolet 3500 HD', description: 'Truk berat untuk angkutan maksimum.', image: 'chevrolet 44.JPEG', pros: ['Daya angkut luar biasa', 'Kekuatan mesin'], cons: ['Harga tinggi', 'Konsumsi bahan bakar'], price: 'Rp 800.000.000', reviews: ['Ideal untuk pekerjaan berat', 'Sangat handal'] },
