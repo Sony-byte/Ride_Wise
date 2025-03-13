@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f9, #e0f7fa);
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #00796b;
+            color: white;
+            padding: 1.5em 0;
+            text-align: center;
+            font-size: 2.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin-top: 2em;
+            transition: background 0.3s;
+        }
+
+        .setting-option {
+            margin-bottom: 1.5em;
+            padding: 1em;
+            background: #e0f2f1;
+            border-radius: 8px;
+            border: 1px solid #b2dfdb;
+        }
+
+        .setting-option label {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        .setting-option input, .setting-option select {
+            width: 100%;
+            padding: 0.5em;
+            border: 2px solid #00796b;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .save-button {
+            display: block;
+            width: 100%;
+            padding: 0.75em;
+            background: #00796b;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .save-button:hover {
+            background: #004d40;
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            display: block;
+            margin: 2em auto;
+            padding: 0.75em 1.5em;
+            background: #00796b;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.3s;
+            width: fit-content;
+        }
+
+        .back-button:hover {
+            background: #004d40;
+            transform: scale(1.05);
+        }
+
+        /* Dark theme styles */
+        body.dark {
+            background: linear-gradient(135deg, #121212, #1e1e1e);
+            color: #f0f0f0;
+        }
+
+        main.dark {
+            background: #1e1e1e;
+        }
+
+        .setting-option.dark {
+            background: #333;
+            border: 1px solid #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Pengaturan
+    </header>
+
+    <main>
+        <div class="setting-option">
+            <label for="theme">Tema</label>
+            <select id="theme">
+                <option value="light">Terang</option>
+                <option value="dark">Gelap</option>
+            </select>
+        </div>
+
+        <div class="setting-option">
+            <label for="language">Bahasa</label>
+            <select id="language">
+                <option value="id">Indonesia</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+
+        <div class="setting-option">
+            <label for="notifications">Notifikasi</label>
+            <input type="checkbox" id="notifications" checked>
+        </div>
+
+        <button class="save-button">Simpan Pengaturan</button>
+
+        <a href="index.html" class="back-button">Kembali ke Halaman Awal</a>
+    </main>
+    <script>
+        const themeSelect = document.getElementById('theme');
+        const body = document.body;
+        const main = document.querySelector('main');
+        const settingOptions = document.querySelectorAll('.setting-option');
+
+        themeSelect.addEventListener('change', function() {
+            if (this.value === 'dark') {
+                body.classList.add('dark');
+                main.classList.add('dark');
+                settingOptions.forEach(option => option.classList.add('dark'));
+            } else {
+                body.classList.remove('dark');
+                main.classList.remove('dark');
+                settingOptions.forEach(option => option.classList.remove('dark'));
+            }
+        });
+    </script>
+</body>
+</html>
